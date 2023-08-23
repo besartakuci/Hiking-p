@@ -1,0 +1,263 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Prism&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald&family=Tilt+Prism&display=swap');
+:root{
+    --green:#1e312d;
+    --blue:blue;
+    --white:rgb(233, 216, 195);
+    --transition: all 1s 0.5s ease-in-out;
+}
+body{
+    background-color: var(--green);
+}
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+.container {
+    margin: 0px auto;
+    max-width: 1320px;
+}
+.section-title {
+    text-align: center;
+    color: var(--white);
+}
+.section-title span {
+    color: var(--green);
+    background-color: var(--white);
+    border-radius: 5px;
+    padding: 3px;
+    
+}
+a {
+    text-decoration: none;
+}
+
+/*HEADER*/
+header,
+header .container {
+    height: 100px;
+    color: var(--white);
+    background-color: var(--green);
+    padding: 5px;
+}
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--green);
+}
+nav a.active,
+nav a:hover{
+    background-color: var(--white);
+    color: var(--green);
+    padding: 5px 20px;
+    transition: var(--transition);
+}
+nav li {
+    margin: 0px 10px;
+    position: relative;
+    display: inline-block;
+}
+
+nav li a{
+    color: var(--white);
+    font-weight: 600;
+    padding: 5px 20px;
+    border: 1px solid var(--white);
+    font-size: 14px;
+    display: inline-block;
+}
+.logo-text span{
+    font-family: 'Tilt Prism', cursive;
+    letter-spacing: 5px;
+}
+/*MAIN*/
+main .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.banner-card { 
+    position: relative;
+}
+.banner-card img{
+    height: auto;
+}
+.banner-text{
+    font-size: 30px;
+    position: absolute;
+    top: 50%;
+    color: var(--white);
+    padding: 10px;
+}
+.banner-text span{
+    font-size: 90px;
+    font-family: 'Tilt Prism', cursive;
+    font-weight: 600;
+    letter-spacing: 5px;
+}
+
+
+/*TRIPS*/
+.trips {
+    display: grid;
+    grid-template-columns: repeat(3 , 1fr);
+    gap: 30px;
+}
+.card {
+    border-radius: 5px;
+    padding: 10px;
+    border: 2px solid var(--white);
+    text-align: center;
+}
+.card h3{
+    color: var(--white);
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 3px;
+    font-weight: 500;
+    font-size: 33px;
+}
+.card a:hover img{
+    padding: 10px;
+    transition: var(--transition);
+    width: 300px;
+}
+.go {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+/*REWARDS*/
+#rewards 
+.container 
+.section-title p b  {
+    background-color: rgb(235, 235, 62);
+    color: #0c0c0c;
+    border-radius: 5px;
+    padding: 3px;
+}
+#rewards 
+.container 
+.section-title h1{
+    letter-spacing: 3px;
+    color:rgb(235, 235, 62) ;
+}
+.rewards {
+    border: 1px solid yellow;
+    padding: 10px;
+}
+
+/*FOOTER*/
+
+footer .container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-bottom: 0px;
+    background-color: rgb(29, 28, 25);
+    margin-top: 40px;
+}
+footer .container h1 {
+    margin-top: 40px;
+    width: 250px;
+    display: block;
+}
+footer h3{
+    color: var(--white);
+    margin-bottom: 20px;
+    margin-top: 30px;
+}
+footer a{
+    text-decoration: none;
+    color: var(--white);
+}
+footer ul {
+    list-style: none;
+}
+footer li {
+    margin-bottom: 30px;
+}
+footer p {
+    margin-right: 50px;
+    text-align: justify;
+}
+footer ul li i {
+    color: var(--white);
+}
+/*MOBILE*/
+@media screen and ( max-width : 765px ) {
+    .container {
+        margin: 0px auto;
+        width: 90%;
+    }
+    .container{
+        width: 90%;
+        grid-template-columns: 1fr;
+    }
+    footer .container{
+        padding: 20px;
+        width: 100%;
+        grid-template-columns: 1fr;
+    }
+    .container,
+    .trips,
+    .go,
+    footer .container{
+        display: flex ;   
+        flex-direction: column;
+    }
+    nav {
+        background-color: #fff;
+        position: absolute;
+        top: 100px;
+        left: 0px;
+    }
+    main .container{
+       height: auto;
+    }
+    
+    .banner-text{
+      width: 100%;
+      padding-right: 0;
+    }
+    div .banner-text {
+        font-size: 1.5em;
+    }
+    div .banner-card{
+    display: block;
+    }
+    .section-title {
+       margin-bottom: 10px;
+       text-align: center;
+       color: var(--white);
+    }
+    .card {
+        border-radius: 10px;
+        padding-top: 10px;
+        border: 2px solid var(--white);
+        text-align: center;
+        box-sizing: border-box;
+        width: 750px;
+    }
+    .card img{
+        width: 700px;
+    }
+    footer p {
+    margin-bottom: 30px;
+    }
+    footer{
+        width: 770px;
+    }
+    .rewards {
+        border: 4px solid yellow;
+        padding: 10px;
+        width: 750px;
+    }
+    .container .section-title h2 {
+        text-align: center;
+    }
+    }
